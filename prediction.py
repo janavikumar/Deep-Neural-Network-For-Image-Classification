@@ -28,7 +28,7 @@ for i in range(0, 10):
         trainingLabel = [float(k) for k in trainingLabel]
 
         #load all the images
-        image = Image.open('./hw4_train/'+str(i)+'/'+str(i)+'_'+str(j)+'.png')
+        image = Image.open('./train/'+str(i)+'/'+str(i)+'_'+str(j)+'.png')
         img = numpy.asarray(image.getdata())
         img = img.astype(float)
         trainData.append(img)
@@ -45,7 +45,7 @@ finalX = finalX.reshape([-1,28,28,1])
 #load all the testing data
 testData = []
 for i in range(0, 10000):
-    image = Image.open('./hw4_test/'+str(i)+'.png')
+    image = Image.open('./test/'+str(i)+'.png')
     img = numpy.asarray(image.getdata())
     img = img.astype(float)
     testData.append(img)
